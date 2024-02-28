@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-1: #f5f4eb;
+    --color-2: #ef476f;
+    --color-3: #ffd166;
+    --color-4: #06d6a0;
+    --color-5: #118ab2;
+    --color-6: #073b4c;
+}
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.wraper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+    width: 100%;
+    background-color:var(--color-6);
+    padding: 10px;
+    display: relative;
+}
+
+.wraper .contact-form{
+    width: 400px;
+    height: 430px;
+    background-color: var(--color-1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px 4px #4f585b;
+    padding:10px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wraper .thankyou-popup{
+    width: 300px;
+    height: 200px;
+    background-color: var(--color-5);
+    position: absolute;
+    top:0%;
+    left: 50%;
+    box-shadow: 0 0 15px 4px #4f585b;
+    transform: translate(-50%, -50%) scale(0.1);
+    border-radius: 10px;
+    color: var(--color-1);
+    text-align: center;
+    padding: 10px;
+    visibility: hidden;
+    transition: transform 0.5s, top 0.5s;
+}
+
+.wraper .thankyou-popup.active{
+    top:50%;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+.thankyou-popup i {
+    font-size: 50px;
+    color: var(--color-4);
+    margin-bottom:10px;
+}
+
+.thankyou-popup h2 {
+    font-size: 20px;
+    color: var(--color-1);
+    margin-bottom:10px;
+}
+
+.thankyou-popup .btn.btn-ok{
+    background-color: transparent;
+    border: 2px solid var(--color-3);
+    color: var(--color-3);
+    transition: background-color 0.3s ease-in-out;
+    padding:5px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.thankyou-popup .btn.btn-ok:hover{
+    background-color: var(--color-3);
+    border: 2px solid var(--color-1);
+    color: var(--color-1);
+}
+
+.contact-form .form-heading{
+   margin-bottom:15px;
+   text-align: center;
+   color: var(--color-6);
+}
+
+.form-heading h3{
+    font-size: 22px;
+}
+
+.form-heading p{
+    font-size: 14px;
+}
+.contact-form .form-inputs{
+    margin:15px 0px;
+    width: 100%;
+    padding: 10px;
+}
+.form-inputs .input-field{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+}
+
+/* .input-field label{
+    font-size: 12px;
+    color: var(--color-6);
+    font-weight: 600;
+    margin: 0px 5px;
+
+} */
+
+.input-field input[type="text"],.input-field input[type="email"], .input-field textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+    margin: 0px 10px;
+    border: 2px solid var(--color-1);
+    outline: none;
+    border-radius: 6px;
+    color: var(--color-6);
+}
+
+.input-field input[type="text"]:hover,.input-field input[type="email"]:hover, .input-field textarea:hover{
+    border: 2px solid var(--color-6);
+    outline: none;
+    border-radius: 6px;
+}
+
+.input-field .btn{
+    margin: 5px auto;
+    padding:4px 15px;
+    border-radius:6px; 
+    cursor: pointer;
+}
+
+.input-field .btn.btn-submit{
+    background-color: transparent;
+    border: 2px solid var(--color-6);
+    color: var(--color-6);
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius:6px;
+}
+
+.input-field .btn.btn-submit:hover{
+    background-color: var(--color-6);
+    border: 2px solid var(--color-5);
+    color: var(--color-1);
+}
+
+
+.input-field span{
+    color: var(--color-2);
+    font-size:10px;
+    margin: 1px auto;
+}
+
+.validInput{
+    border: 2px solid var(--color-4) !important;
+}
+
+.invalidInput{
+    border: 2px solid var(--color-2) !important;
+}
+
+
